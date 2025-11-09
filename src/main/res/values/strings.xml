@@ -1,7 +1,0 @@
-<resources>
-    <!-- Path: /app/src/main/res/values/strings.xml -->
-    <string name="app_name">Test App</string>
-    <string name="initial_greeting">Hello, World!</string>
-    <string name="hint_text">Enter your name</string>
-    <string name="button_text">Submit</string>
-</resources>
