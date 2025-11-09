@@ -1,9 +1,12 @@
-// Yeh app-level build file hai
-// Ise 'app' folder me rakhein (jaise /app/build.gradle.kts)
+// Path: /app/build.gradle.kts
+// (Maine ise 'alias' se badal kar 'id' kar diya hai taaki yeh root file se match kare)
 plugins {
-    // Android application plugin
+    // Purana: alias(libs.plugins.android.application)
+    // Naya (correct):
     id("com.android.application")
-    // Kotlin Android plugin
+
+    // Purana: alias(libs.plugins.kotlin.android)
+    // Naya (correct):
     id("org.jetbrains.kotlin.android")
 }
 
@@ -37,18 +40,18 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    // View Binding ko enable karta hai (XML elements ko easily access karne ke liye)
     buildFeatures {
         viewBinding = true
     }
 }
 
-// Yahaan app ki dependencies (libraries) hain
+// Maine dependencies ko bhi seedha likh diya hai (bina 'libs' ke)
 dependencies {
     implementation("androidx.core:core-ktx:1.13.1")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
